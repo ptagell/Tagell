@@ -327,29 +327,30 @@ input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
 
-/* line 74, ../../../app/stylesheets/partials/_page.scss */
+/*$black: #654233;*/
+/* line 82, ../../../app/stylesheets/partials/_page.scss */
 body {
-  background: #717171 url("/images/grey-background.png") repeat;
+  background: #717171 url("/images/darkbrown-background.png") repeat;
 }
 
-/* line 78, ../../../app/stylesheets/partials/_page.scss */
+/* line 86, ../../../app/stylesheets/partials/_page.scss */
 #container {
   width: 33em;
-  margin: 100px auto 0px auto;
+  margin: 200px auto 0px auto;
 }
 
-/* line 83, ../../../app/stylesheets/partials/_page.scss */
+/* line 93, ../../../app/stylesheets/partials/_page.scss */
 header {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
-/* line 87, ../../../app/stylesheets/partials/_page.scss */
+/* line 97, ../../../app/stylesheets/partials/_page.scss */
 header hgroup p {
   position: relative;
   top: 73px;
   padding-top: 14px;
   padding-left: 12px;
-  background: grey;
+  background: #815c3f;
   text-align: left;
   color: white;
   font-size: 1.6em;
@@ -359,11 +360,14 @@ header hgroup p {
   width: 37px;
   -moz-border-radius: 25px;
   border-radius: 25px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #b3b3b3;
   text-shadow: -1px -1px 1px #333333;
   filter: dropshadow(color=#333333, offx=-1, offy=-1);
+  -webkit-box-shadow: inset 3px 3px 3px #4d4d4d;
+  -moz-box-shadow: inset 3px 3px 3px #4d4d4d;
+  box-shadow: inset 3px 3px 3px #4d4d4d;
 }
-/* line 104, ../../../app/stylesheets/partials/_page.scss */
+/* line 115, ../../../app/stylesheets/partials/_page.scss */
 header hgroup h1 {
   margin-left: 25px;
   font-size: 6em;
@@ -372,25 +376,59 @@ header hgroup h1 {
   text-shadow: -1px -1px 5px #333333;
   filter: dropshadow(color=#333333, offx=-1, offy=-1);
 }
-/* line 114, ../../../app/stylesheets/partials/_page.scss */
+/* line 126, ../../../app/stylesheets/partials/_page.scss */
 header hgroup h1 span {
   text-align: left;
   font-size: 0.6em;
 }
-/* line 120, ../../../app/stylesheets/partials/_page.scss */
+/* line 132, ../../../app/stylesheets/partials/_page.scss */
 header hgroup h2 {
   color: white;
+  font-size: 1.4em;
 }
 
-/* line 127, ../../../app/stylesheets/partials/_page.scss */
+/* line 141, ../../../app/stylesheets/partials/_page.scss */
+#alfiespace {
+  position: absolute;
+  top: 50px;
+}
+/* line 144, ../../../app/stylesheets/partials/_page.scss */
+#alfiespace p {
+  text-align: right;
+  color: #c9a990;
+}
+
+/* line 152, ../../../app/stylesheets/partials/_page.scss */
 #main p {
   color: white;
   text-shadow: -1px -1px 1px #333333;
   filter: dropshadow(color=#333333, offx=-1, offy=-1);
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 500;
   line-height: 1.6em;
   text-align: center;
+}
+/* line 163, ../../../app/stylesheets/partials/_page.scss */
+#main ul {
+  list-style: none;
+  margin-top: 20px;
+  margin-left: 140px;
+}
+/* line 168, ../../../app/stylesheets/partials/_page.scss */
+#main ul li {
+  float: left;
+  position: relative;
+  border-right: 1px solid white;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+/* line 175, ../../../app/stylesheets/partials/_page.scss */
+#main ul li:last-child {
+  border-right: none;
+}
+/* line 178, ../../../app/stylesheets/partials/_page.scss */
+#main ul li a {
+  color: white;
 }
 
 @media print {

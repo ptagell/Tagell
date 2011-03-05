@@ -47,7 +47,9 @@ input:invalid, textarea:invalid {
 //-----------------------------------
 
 $white: #ffffff;
-$black: #333333;
+/*$black: #654233;*/
+$black: rgba(0,0,0,1);
+$margin: 20px;
 
 @mixin headingtextshadow {
   text-shadow: -1px -1px 5px #333333;
@@ -69,20 +71,28 @@ $black: #333333;
   
 }
 
+@mixin boxshadow {
+  -webkit-box-shadow: inset 3px 3px 3px lighten($black, 30%);
+  -moz-box-shadow: inset 3px 3px 3px lighten($black, 30%);
+  box-shadow: inset 3px 3px 3px lighten($black, 30%);
+}
+
 
 
 body {
-   background: #717171 url("/images/grey-background.png") repeat;
+   background: #717171 url("/images/darkbrown-background.png") repeat;
 }
 
 #container {
   width:33em;
-  margin:100px auto 0px auto;
+  margin:200px auto 0px auto;
 }
+
+
 
 header {
   text-align:center;
-  margin-bottom:10px;
+  margin-bottom:$margin;
   hgroup {
     p {
       position:relative;
@@ -91,7 +101,7 @@ header {
         top:14px;
         left:12px;
       };
-      background:grey;
+      background:darken(#c9a990,30%);
       text-align:left;
       color:$white;
       font:{
@@ -100,9 +110,11 @@ header {
       };
       @include circle;
       @include textshadow;
+      @include boxshadow;
     }
     h1 {
     margin-left:25px;
+
     font:{
       size:6em; 
     }
@@ -119,20 +131,56 @@ header {
     
     h2 {
       color:$white;
+      font:{
+        size:1.4em;
+      };
     }
   }
 }
 
+#alfiespace {
+  position:absolute;
+  top:50px;
+  p {
+    text-align:right;
+    color:#c9a990;
+  }
+}
+
 #main {
+
   p {
     color:$white;
     @include textshadow;
     font:{
-      size:1.2em;
+      size:1.1em;
       weight:500;
     };
     line-height:1.6em;
     text-align:center;
+  }
+  
+  ul {
+    list-style:none;
+    margin-top:$margin;
+    margin-left:140px;
+    
+    li{
+      float:left;
+      position:relative;
+      border-right:1px solid $white;
+      margin-right:$margin;
+      padding-right:$margin;
+      
+      &:last-child {
+        border-right:none;
+      }
+      a {
+        color:$white;
+      }
+    }
+    
+    
   }
 }
 
