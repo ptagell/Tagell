@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'haml'
 gem 'compass'
 gem 'html5-boilerplate'
+gem 'heroku'
 
 # Use unicorn as the web server
 # gem 'unicorn'
