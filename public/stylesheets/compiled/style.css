@@ -276,16 +276,7 @@ nav ul, nav li {
   visibility: hidden;
 }
 
-/* line 1, ../../../app/stylesheets/partials/_styles.scss */
-body {
-  background: #717171 url("/images/grey-background.png") repeat;
-}
-/* line 4, ../../../app/stylesheets/partials/_styles.scss */
-body h1 {
-  font-size: 2em;
-  color: white;
-}
-
+@import url(partials/styles.css);
 /* line 8, ../../../app/stylesheets/partials/_page.scss */
 body, select, input, textarea {
   color: #444444;
@@ -334,6 +325,72 @@ input:invalid, textarea:invalid {
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid {
   background-color: #f0dddd;
+}
+
+/* line 74, ../../../app/stylesheets/partials/_page.scss */
+body {
+  background: #717171 url("/images/grey-background.png") repeat;
+}
+
+/* line 78, ../../../app/stylesheets/partials/_page.scss */
+#container {
+  width: 33em;
+  margin: 100px auto 0px auto;
+}
+
+/* line 83, ../../../app/stylesheets/partials/_page.scss */
+header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* line 87, ../../../app/stylesheets/partials/_page.scss */
+header hgroup p {
+  position: relative;
+  top: 73px;
+  padding-top: 14px;
+  padding-left: 12px;
+  background: grey;
+  text-align: left;
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+  display: block;
+  height: 35px;
+  width: 37px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border: 1px solid #e6e6e6;
+  text-shadow: -1px -1px 1px #333333;
+  filter: dropshadow(color=#333333, offx=-1, offy=-1);
+}
+/* line 104, ../../../app/stylesheets/partials/_page.scss */
+header hgroup h1 {
+  margin-left: 25px;
+  font-size: 6em;
+  padding-bottom: 10px;
+  color: white;
+  text-shadow: -1px -1px 5px #333333;
+  filter: dropshadow(color=#333333, offx=-1, offy=-1);
+}
+/* line 114, ../../../app/stylesheets/partials/_page.scss */
+header hgroup h1 span {
+  text-align: left;
+  font-size: 0.6em;
+}
+/* line 120, ../../../app/stylesheets/partials/_page.scss */
+header hgroup h2 {
+  color: white;
+}
+
+/* line 127, ../../../app/stylesheets/partials/_page.scss */
+#main p {
+  color: white;
+  text-shadow: -1px -1px 1px #333333;
+  filter: dropshadow(color=#333333, offx=-1, offy=-1);
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1.6em;
+  text-align: center;
 }
 
 @media print {

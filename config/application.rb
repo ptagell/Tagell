@@ -40,3 +40,6 @@ module Tagell
     config.filter_parameters += [:password]
   end
 end
+
+TWITTER_URL = "http://twitter.com/tagell"
+FACEBOOK_URL = "http://www.facebook.com/tagell"
