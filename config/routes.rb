@@ -1,7 +1,7 @@
 Tagell::Application.routes.draw do
-  resources :pages
+
   
-  get "page/home"
+  get "pages/home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -52,7 +52,7 @@ Tagell::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "page#home"
+  root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 
