@@ -3165,3 +3165,1311 @@ Started GET "/" for 127.0.0.1 at 2011-03-06 17:02:14 +1100
   Processing by PagesController#home as HTML
 Rendered pages/home.html.erb within layouts/application (1.8ms)
 Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:27:22 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/smlink/" for 127.0.0.1 at 2011-03-07 07:27:31 +1100
+
+ActionController::RoutingError (No route matches "/smlink"):
+  
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sociallinks" for 127.0.0.1 at 2011-03-07 07:27:45 +1100
+  Processing by SociallinksController#index as HTML
+  [1m[36mSociallink Load (0.4ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+SQLite3::SQLException: no such table: sociallinks: SELECT "sociallinks".* FROM "sociallinks"
+Completed   in 64ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: sociallinks: SELECT "sociallinks".* FROM "sociallinks"):
+  app/controllers/sociallinks_controller.rb:5:in `index'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/sociallinks/index" for 127.0.0.1 at 2011-03-07 07:27:50 +1100
+  Processing by SociallinksController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 6ms
+
+NoMethodError (undefined method `eq' for nil:NilClass):
+  app/controllers/sociallinks_controller.rb:16:in `show'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.1ms)
+
+
+Started GET "/sociallinks/show" for 127.0.0.1 at 2011-03-07 07:27:53 +1100
+  Processing by SociallinksController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 5ms
+
+NoMethodError (undefined method `eq' for nil:NilClass):
+  app/controllers/sociallinks_controller.rb:16:in `show'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.9ms)
+
+
+Started GET "/sociallinks/new" for 127.0.0.1 at 2011-03-07 07:28:03 +1100
+  Processing by SociallinksController#new as HTML
+Completed   in 5ms
+
+ActiveRecord::StatementInvalid (Could not find table 'sociallinks'):
+  app/controllers/sociallinks_controller.rb:27:in `new'
+  app/controllers/sociallinks_controller.rb:27:in `new'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.7ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePages (20110305083542)
+Migrating to CreateSociallinks (20110306202704)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.8ms)[0m  [1mCREATE TABLE "sociallinks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110306202704')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("pages")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("sociallinks")[0m
+
+
+Started GET "/sociallinks" for 127.0.0.1 at 2011-03-07 07:28:43 +1100
+  Processing by SociallinksController#index as HTML
+  [1m[36mSociallink Load (0.4ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered sociallinks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 46ms (Views: 6.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sociallinks/new" for 127.0.0.1 at 2011-03-07 07:28:49 +1100
+  Processing by SociallinksController#new as HTML
+Rendered sociallinks/_form.html.erb (8.2ms)
+Rendered sociallinks/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sociallinks" for 127.0.0.1 at 2011-03-07 07:29:03 +1100
+  Processing by SociallinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pf2zuRQ9J4eaYn1/cjxk8MMg9QnQIwABSTZkt/9jhQ0=", "sociallink"=>{"name"=>"Twitter", "url"=>"http://www.twitter.com/tagell"}, "commit"=>"Create Sociallink"}
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "sociallinks" ("name", "url", "created_at", "updated_at") VALUES ('Twitter', 'http://www.twitter.com/tagell', '2011-03-06 20:29:03.306861', '2011-03-06 20:29:03.306861')[0m
+Redirected to http://localhost:3000/sociallinks/1
+Completed 302 Found in 60ms
+
+
+Started GET "/sociallinks/1" for 127.0.0.1 at 2011-03-07 07:29:03 +1100
+  Processing by SociallinksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSociallink Load (0.1ms)[0m  SELECT "sociallinks".* FROM "sociallinks" WHERE "sociallinks"."id" = 1 LIMIT 1
+Rendered sociallinks/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 21ms (Views: 12.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/sociallinks" for 127.0.0.1 at 2011-03-07 07:29:08 +1100
+  Processing by SociallinksController#index as HTML
+  [1m[36mSociallink Load (0.3ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered sociallinks/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sociallinks" for 127.0.0.1 at 2011-03-07 07:29:31 +1100
+  Processing by SociallinksController#index as HTML
+  [1m[35mSociallink Load (0.3ms)[0m  SELECT "sociallinks".* FROM "sociallinks"
+Rendered sociallinks/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 44ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sociallinks" for 127.0.0.1 at 2011-03-07 07:29:31 +1100
+  Processing by SociallinksController#index as HTML
+  [1m[36mSociallink Load (0.3ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered sociallinks/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sociallinks/new" for 127.0.0.1 at 2011-03-07 07:29:39 +1100
+  Processing by SociallinksController#new as HTML
+Rendered sociallinks/_form.html.erb (5.7ms)
+Rendered sociallinks/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 18ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sociallinks" for 127.0.0.1 at 2011-03-07 07:29:49 +1100
+  Processing by SociallinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pf2zuRQ9J4eaYn1/cjxk8MMg9QnQIwABSTZkt/9jhQ0=", "sociallink"=>{"name"=>"Facebook", "url"=>"http://www.facebook.com/tagell"}, "commit"=>"Create Sociallink"}
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "sociallinks" ("name", "url", "created_at", "updated_at") VALUES ('Facebook', 'http://www.facebook.com/tagell', '2011-03-06 20:29:49.069939', '2011-03-06 20:29:49.069939')
+Redirected to http://localhost:3000/sociallinks/2
+Completed 302 Found in 44ms
+
+
+Started GET "/sociallinks/2" for 127.0.0.1 at 2011-03-07 07:29:49 +1100
+  Processing by SociallinksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSociallink Load (0.1ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks" WHERE "sociallinks"."id" = 2 LIMIT 1[0m
+Rendered sociallinks/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sociallinks/2" for 127.0.0.1 at 2011-03-07 07:30:17 +1100
+  Processing by SociallinksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSociallink Load (0.1ms)[0m  SELECT "sociallinks".* FROM "sociallinks" WHERE "sociallinks"."id" = 2 LIMIT 1
+Rendered sociallinks/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sociallinks" for 127.0.0.1 at 2011-03-07 07:30:18 +1100
+  Processing by SociallinksController#index as HTML
+  [1m[36mSociallink Load (0.3ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered sociallinks/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 46ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sociallinks" for 127.0.0.1 at 2011-03-07 07:32:49 +1100
+  Processing by SociallinksController#index as HTML
+  [1m[35mSociallink Load (0.4ms)[0m  SELECT "sociallinks".* FROM "sociallinks"
+Rendered sociallinks/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:32:52 +1100
+  Processing by PagesController#home as HTML
+Completed   in 1ms
+
+NoMethodError (undefined method `has_many' for #<PagesController:0x00000100ef0168>):
+  app/controllers/pages_controller.rb:4:in `home'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:33:00 +1100
+  Processing by PagesController#home as HTML
+ERROR: compiling _app_views_pages_home_html_erb___2154522420176085036_2155383100__2410461512940856595 RAISED /Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:21: syntax error, unexpected tASSOC, expecting ')'
+...ffer.append= ( sociallink.url=>"><%= sociallink.name );@outp...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...TWITTER_URL, :class => "twitter" );@output_buffer.safe_conca...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...CEBOOK_URL, :class => "facebook" );@output_buffer.safe_conca...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: unterminated string meets end of file
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_pages_home_html_erb___2154522420176085036_2155383100__2410461512940856595(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "pages/home";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+<section id="container">
+
+  <header>
+    <hgroup>
+      <p><span>Hi,</span></p>
+      <h1>I\'m Paul.</h1>
+      <h2>I live and work in Melbourne, Australia.</h2>
+    </hgroup>
+  </header>
+
+  <section id="alfiespace"> 
+    <img src="/images/alfie-outline.png" />
+    <p>This is Alfie.</p>
+  </section>
+
+  <section id="main">
+    <p>I haven\'t really figured out what I\'m going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+  
+    <ul>
+      <li><a href="');@output_buffer.append= ( sociallink.url=>"><%= sociallink.name );@output_buffer.safe_concat('</a></li>
+      
+      <li>');@output_buffer.append= ( link_to 'Twitter', TWITTER_URL, :class => "twitter" );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to 'Facebook', FACEBOOK_URL, :class => "facebook" );@output_buffer.safe_concat('</li>
+    </ul>
+  </section>
+
+</section>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `module_eval'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `compile'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `block in render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/ptagell/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__177948021156093363__process_action__4486088576552572658__callbacks'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `block in action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/plugin/rack.rb:41:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/ptagell/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/ptagell/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/ptagell/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed   in 5ms
+
+ActionView::Template::Error (/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:21: syntax error, unexpected tASSOC, expecting ')'
+...ffer.append= ( sociallink.url=>"><%= sociallink.name );@outp...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...TWITTER_URL, :class => "twitter" );@output_buffer.safe_conca...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...CEBOOK_URL, :class => "facebook" );@output_buffer.safe_conca...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: unterminated string meets end of file
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: syntax error, unexpected $end, expecting ')'):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url=>"><%= sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:33:01 +1100
+  Processing by PagesController#home as HTML
+ERROR: compiling _app_views_pages_home_html_erb___2154522420176085036_2186074940__2410461512940856595 RAISED /Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:21: syntax error, unexpected tASSOC, expecting ')'
+...ffer.append= ( sociallink.url=>"><%= sociallink.name );@outp...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...TWITTER_URL, :class => "twitter" );@output_buffer.safe_conca...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...CEBOOK_URL, :class => "facebook" );@output_buffer.safe_conca...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: unterminated string meets end of file
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: syntax error, unexpected $end, expecting ')'
+Function body:           def _app_views_pages_home_html_erb___2154522420176085036_2186074940__2410461512940856595(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "pages/home";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('
+<section id="container">
+
+  <header>
+    <hgroup>
+      <p><span>Hi,</span></p>
+      <h1>I\'m Paul.</h1>
+      <h2>I live and work in Melbourne, Australia.</h2>
+    </hgroup>
+  </header>
+
+  <section id="alfiespace"> 
+    <img src="/images/alfie-outline.png" />
+    <p>This is Alfie.</p>
+  </section>
+
+  <section id="main">
+    <p>I haven\'t really figured out what I\'m going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+  
+    <ul>
+      <li><a href="');@output_buffer.append= ( sociallink.url=>"><%= sociallink.name );@output_buffer.safe_concat('</a></li>
+      
+      <li>');@output_buffer.append= ( link_to 'Twitter', TWITTER_URL, :class => "twitter" );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to 'Facebook', FACEBOOK_URL, :class => "facebook" );@output_buffer.safe_concat('</li>
+    </ul>
+  </section>
+
+</section>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `module_eval'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `compile'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `block in render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/ptagell/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__177948021156093363__process_action__4486088576552572658__callbacks'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `block in action'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/haml-3.0.25/lib/sass/plugin/rack.rb:41:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/ptagell/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/ptagell/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/ptagell/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed   in 6ms
+
+ActionView::Template::Error (/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:21: syntax error, unexpected tASSOC, expecting ')'
+...ffer.append= ( sociallink.url=>"><%= sociallink.name );@outp...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:23: syntax error, unexpected tIDENTIFIER, expecting ')'
+...TWITTER_URL, :class => "twitter" );@output_buffer.safe_conca...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+...CEBOOK_URL, :class => "facebook" );@output_buffer.safe_conca...
+...                               ^
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: unterminated string meets end of file
+/Users/ptagell/Sites/Tagell.com/app/views/pages/home.html.erb:24: syntax error, unexpected $end, expecting ')'):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url=>"><%= sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:33:16 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.8ms)
+Completed   in 9ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000100f25c50>:0x00000100f21470>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>"><%= sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2155409040__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:33:18 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (5.0ms)
+Completed   in 9ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x0000010498bbd8>:0x00000104988e88>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>"><%= sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2186031300__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:33:24 +1100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendered pages/home.html.erb within layouts/application (9.9ms)
+Completed   in 14ms
+
+ActionView::Template::Error (undefined method `url' for #<Class:0x00000100e3fa48>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= Sociallink.url %>"><%= Sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2155204080__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:35:02 +1100
+  Processing by PagesController#home as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered pages/home.html.erb within layouts/application (12.1ms)
+Completed   in 16ms
+
+ActionView::Template::Error (undefined method `url' for #<Class:0x0000010485a610>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= Sociallink.url %>"><%= Sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2185600500__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:35:03 +1100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendered pages/home.html.erb within layouts/application (9.8ms)
+Completed   in 14ms
+
+ActionView::Template::Error (undefined method `url' for #<Class:0x00000100d24f78>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= Sociallink.url %>"><%= Sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2154580720__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:35:47 +1100
+  Processing by PagesController#home as HTML
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered pages/home.html.erb within layouts/application (19.3ms)
+Completed   in 23ms
+
+ActionView::Template::Error (undefined method `url' for #<Class:0x00000100f62768>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= Sociallink.url %>"><%= Sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2155797740__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:35:48 +1100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendered pages/home.html.erb within layouts/application (10.7ms)
+Completed   in 14ms
+
+ActionView::Template::Error (undefined method `url' for #<Class:0x000001048b4020>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= Sociallink.url %>"><%= Sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2185877160__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:35:48 +1100
+  Processing by PagesController#home as HTML
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered pages/home.html.erb within layouts/application (12.4ms)
+Completed   in 16ms
+
+ActionView::Template::Error (undefined method `url' for #<Class:0x00000100d6bc20>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= Sociallink.url %>"><%= Sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2154732460__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:35:49 +1100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendered pages/home.html.erb within layouts/application (11.1ms)
+Completed   in 16ms
+
+ActionView::Template::Error (undefined method `url' for #<Class:0x00000100f99a10>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= Sociallink.url %>"><%= Sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2165357800__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:35:49 +1100
+  Processing by PagesController#home as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered pages/home.html.erb within layouts/application (11.1ms)
+Completed   in 45ms
+
+ActionView::Template::Error (undefined method `url' for #<Class:0x00000104955290>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= Sociallink.url %>"><%= Sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2154633980__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:36:05 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.6ms)
+Completed   in 9ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000100e7a440>:0x00000100e71750>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>"><%= sociallink.name %></a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2155047100__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:36:23 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.6ms)
+Completed   in 8ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000104910550>:0x0000010490dcd8>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2185780120__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:20 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.7ms)
+Completed   in 9ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000100e1fcc0>:0x00000100e1a568>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2154874020__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:21 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.8ms)
+Completed   in 9ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x000001048b30d0>:0x000001048b0df8>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2185591480__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:21 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.4ms)
+Completed   in 8ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000100de9e18>:0x00000100de6d08>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2154766960__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:21 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (8.0ms)
+Completed   in 14ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000104875c08>:0x000001048738b8>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2185465940__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:24 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.8ms)
+Completed   in 9ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000100db9f10>:0x00000100db4dd0>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2154662200__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (28.4ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:24 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.6ms)
+Completed   in 9ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x0000010485a480>:0x00000104857910>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2185408560__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:24 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (5.2ms)
+Completed   in 10ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000100d845b8>:0x00000100d814d0>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2154560060__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (27.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (33.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:25 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.8ms)
+Completed   in 9ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x0000010301dbb0>:0x00000103015f50>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2172685720__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:25 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (5.6ms)
+Completed   in 10ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000100d49440>:0x00000100d45f70>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2154436380__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:26 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.7ms)
+Completed   in 9ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000102254088>:0x00000102235a70>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2165374460__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:37:26 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (6.0ms)
+Completed   in 10ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000100cf7bb8>:0x00000100b85b90>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2153512900__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:38:02 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.9ms)
+Completed   in 10ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000100fccdc0>:0x00000100fc9d28>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2155754160__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+
+
+Started GET "/sociallinks" for 127.0.0.1 at 2011-03-07 07:39:00 +1100
+  Processing by SociallinksController#index as HTML
+  [1m[36mSociallink Load (0.5ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered sociallinks/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 49ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sociallinks/new" for 127.0.0.1 at 2011-03-07 07:39:03 +1100
+  Processing by SociallinksController#new as HTML
+Rendered sociallinks/_form.html.erb (5.6ms)
+Rendered sociallinks/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 22ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sociallinks" for 127.0.0.1 at 2011-03-07 07:39:17 +1100
+  Processing by SociallinksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pf2zuRQ9J4eaYn1/cjxk8MMg9QnQIwABSTZkt/9jhQ0=", "sociallink"=>{"name"=>"Github", "url"=>"http://github.com/tagell"}, "commit"=>"Create Sociallink"}
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "sociallinks" ("name", "url", "created_at", "updated_at") VALUES ('Github', 'http://github.com/tagell', '2011-03-06 20:39:17.862180', '2011-03-06 20:39:17.862180')
+Redirected to http://localhost:3000/sociallinks/3
+Completed 302 Found in 16ms
+
+
+Started GET "/sociallinks/3" for 127.0.0.1 at 2011-03-07 07:39:17 +1100
+  Processing by SociallinksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSociallink Load (0.1ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks" WHERE "sociallinks"."id" = 3 LIMIT 1[0m
+Rendered sociallinks/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 20ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sociallinks" for 127.0.0.1 at 2011-03-07 07:39:19 +1100
+  Processing by SociallinksController#index as HTML
+  [1m[35mSociallink Load (0.4ms)[0m  SELECT "sociallinks".* FROM "sociallinks"
+Rendered sociallinks/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:39:31 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (4.7ms)
+Completed   in 8ms
+
+ActionView::Template::Error (undefined local variable or method `sociallink' for #<#<Class:0x00000100d45688>:0x00000100d3f378>):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <li><a href="<%= sociallink.url %>">Test</a></li>
+    22:       
+    23:       <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
+    24:       <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2154424560__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:56:07 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (10.7ms)
+Completed   in 14ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Sociallinks):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <% Sociallinks.all.each do |sociallink| %>
+    22:       
+    23:       <li><%= sociallink.name %></li>
+    24:       
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2164673640__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:56:08 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (38.1ms)
+Completed   in 42ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Sociallinks):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <% Sociallinks.all.each do |sociallink| %>
+    22:       
+    23:       <li><%= sociallink.name %></li>
+    24:       
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2151844820__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:56:08 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (14.5ms)
+Completed   in 20ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Sociallinks):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <% Sociallinks.all.each do |sociallink| %>
+    22:       
+    23:       <li><%= sociallink.name %></li>
+    24:       
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2155178220__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:56:08 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (14.9ms)
+Completed   in 21ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Sociallinks):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <% Sociallinks.all.each do |sociallink| %>
+    22:       
+    23:       <li><%= sociallink.name %></li>
+    24:       
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2185717160__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:56:15 +1100
+  Processing by PagesController#home as HTML
+Rendered pages/home.html.erb within layouts/application (10.7ms)
+Completed   in 15ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Sociallinks):
+    18:     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
+    19:   
+    20:     <ul>
+    21:       <% Sociallinks.all.each do |sociallink| %>
+    22:       
+    23:       <li><%= sociallink.name %></li>
+    24:       
+  app/views/pages/home.html.erb:21:in `_app_views_pages_home_html_erb___2154522420176085036_2154635080__2410461512940856595'
+
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/ptagell/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:56:19 +1100
+  Processing by PagesController#home as HTML
+  [1m[36mSociallink Load (0.4ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered pages/home.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:56:35 +1100
+  Processing by PagesController#home as HTML
+  [1m[35mSociallink Load (0.4ms)[0m  SELECT "sociallinks".* FROM "sociallinks"
+Rendered pages/home.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:57:07 +1100
+  Processing by PagesController#home as HTML
+  [1m[36mSociallink Load (0.4ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered pages/home.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:57:30 +1100
+  Processing by PagesController#home as HTML
+  [1m[35mSociallink Load (0.4ms)[0m  SELECT "sociallinks".* FROM "sociallinks"
+Rendered pages/home.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:57:30 +1100
+  Processing by PagesController#home as HTML
+  [1m[36mSociallink Load (0.4ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered pages/home.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:57:31 +1100
+  Processing by PagesController#home as HTML
+  [1m[35mSociallink Load (0.4ms)[0m  SELECT "sociallinks".* FROM "sociallinks"
+Rendered pages/home.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:57:31 +1100
+  Processing by PagesController#home as HTML
+  [1m[36mSociallink Load (0.4ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered pages/home.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sociallinks" for 127.0.0.1 at 2011-03-07 07:58:04 +1100
+  Processing by SociallinksController#index as HTML
+  [1m[35mSociallink Load (0.4ms)[0m  SELECT "sociallinks".* FROM "sociallinks"
+Rendered sociallinks/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 20ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sociallinks/3/edit" for 127.0.0.1 at 2011-03-07 07:58:07 +1100
+  Processing by SociallinksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSociallink Load (0.1ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks" WHERE "sociallinks"."id" = 3 LIMIT 1[0m
+Rendered sociallinks/_form.html.erb (7.4ms)
+Rendered sociallinks/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 22ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sociallinks/3" for 127.0.0.1 at 2011-03-07 07:58:13 +1100
+  Processing by SociallinksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pf2zuRQ9J4eaYn1/cjxk8MMg9QnQIwABSTZkt/9jhQ0=", "sociallink"=>{"name"=>"Github", "url"=>"http://github.com/ptagell"}, "commit"=>"Update Sociallink", "id"=>"3"}
+  [1m[35mSociallink Load (0.1ms)[0m  SELECT "sociallinks".* FROM "sociallinks" WHERE "sociallinks"."id" = 3 LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE "sociallinks" SET "url" = 'http://github.com/ptagell', "updated_at" = '2011-03-06 20:58:13.619189' WHERE "sociallinks"."id" = 3[0m
+Redirected to http://localhost:3000/sociallinks/3
+Completed 302 Found in 17ms
+
+
+Started GET "/sociallinks/3" for 127.0.0.1 at 2011-03-07 07:58:13 +1100
+  Processing by SociallinksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSociallink Load (0.1ms)[0m  SELECT "sociallinks".* FROM "sociallinks" WHERE "sociallinks"."id" = 3 LIMIT 1
+Rendered sociallinks/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 18ms (Views: 10.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:58:20 +1100
+  Processing by PagesController#home as HTML
+  [1m[36mSociallink Load (0.4ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered pages/home.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 48ms (Views: 47.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:58:50 +1100
+  Processing by PagesController#home as HTML
+  [1m[35mSociallink Load (0.4ms)[0m  SELECT "sociallinks".* FROM "sociallinks"
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-03-07 07:58:52 +1100
+  Processing by PagesController#home as HTML
+  [1m[36mSociallink Load (0.4ms)[0m  [1mSELECT "sociallinks".* FROM "sociallinks"[0m
+Rendered pages/home.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.4ms)

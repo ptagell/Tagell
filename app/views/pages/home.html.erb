@@ -18,8 +18,12 @@
     <p>I haven't really figured out what I'm going to do with this page just yet (apart from using it to experiment with some new things), so in the meantime here are some links to my various online profiles.</p>
   
     <ul>
-      <li><%= link_to 'Twitter', TWITTER_URL, :class => "twitter" %></li>
-      <li><%= link_to 'Facebook', FACEBOOK_URL, :class => "facebook" %></li>
+      <% Sociallink.all.each do |sociallink| %>
+      
+      <li><a href="<%= sociallink.url %>"><%= sociallink.name %></a></li>
+      
+      <% end %>
+      
     </ul>
   </section>
 

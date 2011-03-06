@@ -331,20 +331,21 @@ input:invalid, textarea:invalid {
 /* line 83, ../../../app/stylesheets/partials/_page.scss */
 body {
   background: #717171 url("/images/darkbrown-background.png") repeat;
+  color: #c9a990;
 }
 
-/* line 87, ../../../app/stylesheets/partials/_page.scss */
+/* line 88, ../../../app/stylesheets/partials/_page.scss */
 #container {
   width: 33em;
   margin: 200px auto 0px auto;
 }
 
-/* line 94, ../../../app/stylesheets/partials/_page.scss */
+/* line 95, ../../../app/stylesheets/partials/_page.scss */
 header {
   text-align: center;
   margin-bottom: 20px;
 }
-/* line 98, ../../../app/stylesheets/partials/_page.scss */
+/* line 99, ../../../app/stylesheets/partials/_page.scss */
 header hgroup p {
   position: relative;
   top: 73px;
@@ -366,7 +367,7 @@ header hgroup p {
   -moz-box-shadow: inset 3px 3px 13px black, 0px 3px 3px #c9a990;
   box-shadow: inset 3px 3px 13px black, 0px 3px 3px #c9a990;
 }
-/* line 116, ../../../app/stylesheets/partials/_page.scss */
+/* line 117, ../../../app/stylesheets/partials/_page.scss */
 header hgroup h1 {
   margin-left: 25px;
   font-size: 6em;
@@ -375,31 +376,31 @@ header hgroup h1 {
   text-shadow: -1px -1px 5px #333333;
   filter: dropshadow(color=#333333, offx=-1, offy=-1);
 }
-/* line 127, ../../../app/stylesheets/partials/_page.scss */
+/* line 128, ../../../app/stylesheets/partials/_page.scss */
 header hgroup h1 span {
   text-align: left;
   font-size: 0.6em;
 }
-/* line 133, ../../../app/stylesheets/partials/_page.scss */
+/* line 134, ../../../app/stylesheets/partials/_page.scss */
 header hgroup h2 {
   color: #c9a990;
   font-size: 1.4em;
 }
 
-/* line 142, ../../../app/stylesheets/partials/_page.scss */
+/* line 143, ../../../app/stylesheets/partials/_page.scss */
 #alfiespace {
   position: absolute;
   top: 70px;
   margin-left: 30px;
 }
-/* line 146, ../../../app/stylesheets/partials/_page.scss */
+/* line 147, ../../../app/stylesheets/partials/_page.scss */
 #alfiespace p {
   text-align: right;
   color: #c9a990;
   font-size: 0.8em;
 }
 
-/* line 157, ../../../app/stylesheets/partials/_page.scss */
+/* line 158, ../../../app/stylesheets/partials/_page.scss */
 #main p {
   color: #c9a990;
   text-shadow: -1px -1px 1px #333333;
@@ -409,13 +410,13 @@ header hgroup h2 {
   line-height: 1.6em;
   text-align: center;
 }
-/* line 168, ../../../app/stylesheets/partials/_page.scss */
+/* line 169, ../../../app/stylesheets/partials/_page.scss */
 #main ul {
   list-style: none;
   margin-top: 20px;
   margin-left: 140px;
 }
-/* line 173, ../../../app/stylesheets/partials/_page.scss */
+/* line 174, ../../../app/stylesheets/partials/_page.scss */
 #main ul li {
   float: left;
   position: relative;
@@ -423,11 +424,11 @@ header hgroup h2 {
   margin-right: 20px;
   padding-right: 20px;
 }
-/* line 180, ../../../app/stylesheets/partials/_page.scss */
+/* line 181, ../../../app/stylesheets/partials/_page.scss */
 #main ul li:last-child {
   border-right: none;
 }
-/* line 183, ../../../app/stylesheets/partials/_page.scss */
+/* line 184, ../../../app/stylesheets/partials/_page.scss */
 #main ul li a {
   color: #c9a990;
 }

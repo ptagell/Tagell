@@ -1,6 +1,8 @@
 Tagell::Application.routes.draw do
 
   
+  resources :sociallinks
+
   get "pages/home"
 
   # The priority is based upon order of creation:
