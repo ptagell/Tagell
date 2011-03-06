@@ -46,7 +46,7 @@ input:invalid, textarea:invalid {
 // Add your own custom styles below
 //-----------------------------------
 
-$white: #ffffff;
+$white: #c9a990;
 /*$black: #654233;*/
 $black: rgba(0,0,0,1);
 $margin: 20px;
@@ -67,14 +67,15 @@ $margin: 20px;
   width:37px;
   -moz-border-radius: 25px;
   border-radius: 25px;
-  border:1px solid lighten(#c9a990,0%);
+
   
 }
 
 @mixin boxshadow {
-  -webkit-box-shadow: inset 3px 3px 3px lighten($black, 30%);
-  -moz-box-shadow: inset 3px 3px 3px lighten($black, 30%);
-  box-shadow: inset 3px 3px 3px lighten($black, 30%);
+  -webkit-box-shadow: inset 3px 3px 13px darken($black, 30%), 0px 3px 3px $white;
+  -moz-box-shadow: inset 3px 3px 13px darken($black, 30%), 0px 3px 3px $white;
+  box-shadow: inset 3px 3px 13px darken($black, 30%), 0px 3px 3px $white;
+  
 }
 
 
@@ -101,7 +102,7 @@ header {
         top:14px;
         left:12px;
       };
-      background:darken(#c9a990,30%);
+/*      background:darken(#c9a990,30%);*/
       text-align:left;
       color:$white;
       font:{
@@ -140,10 +141,14 @@ header {
 
 #alfiespace {
   position:absolute;
-  top:50px;
+  top:70px;
+  margin-left:30px;
   p {
     text-align:right;
     color:#c9a990;
+    font:{
+      size:0.8em;
+    };
   }
 }
 
